@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/textarea-autosize.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>菜单定义</h1>
+
+    <form action="/action/create-menu" method="POST">
+      <div class="form-group">
+        <textarea class="form-control" name="menu"><%- JSON.stringify(menu, null, 2) %></textarea>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary pull-right">提交</button>
+      </div>
+    </form>
+
+  </div>
+
+  <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="/bower_components/textarea-autosize/dist/jquery.textarea_autosize.min.js"></script>
+  <script>
+    $('textarea').textareaAutoSize();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+  <title>AirKiss 配网</title>
+  <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/0.4.2/weui.min.css">
+  <style>
+    .container {padding: 0 15px;}
+  </style>
+</head>
+<body>
+
+  <% include partials/manual %>
+
+  <div class="container">
+    <button id="network-configure-btn" class="weui_btn weui_btn_primary weui_btn_disabled" disabled>初始化中...</button>
+  </div>
+
+  <% include partials/wechat %>
+  <script>
+    var btn = document.getElementById('network-configure-btn');
+    btn.addEventListener('click', onNetworkConfigureButtonPushed);
+
+    wx.ready(function() {
+      btn.disabled = false;
+      btn.innerHTML = '输入 WiFi 密码';
+      btn.className = 'weui_btn weui_btn_primary';
+    });
+
+    function onNetworkConfigureButtonPushed() {
+      wx.invoke('configWXDeviceWiFi', '<%- key %>', function(err, result) {
+        if (err.err_msg === 'configWXDeviceWiFi:cancel') {
+          return alert('消费者取消了配网的动作');
+        }
+        alert(JSON.stringify(result, null, 2));
+      });
+    }
+  </script>
+</body>
+</html>

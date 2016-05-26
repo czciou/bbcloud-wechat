@@ -1,0 +1,22 @@
+{
+  "name": "bbcloud-wechat",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Gen Liu <gerald_721@hotmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "textarea-autosize": "^0.4.2"
+  }
+}

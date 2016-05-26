@@ -1,0 +1,20 @@
+{
+  "name": "bbcloud-wechat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "bower install"
+  },
+  "keywords": [],
+  "author": "Gen Liu",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "ejs": "^2.4.2",
+    "express": "^4.13.4",
+    "nconf": "^0.8.4",
+    "wechat-api": "^1.27.1"
+  }
+}

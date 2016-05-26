@@ -1,0 +1,11 @@
+{
+  "port": 3000,
+  "airkiss": {
+    "key": ""
+  },
+  "wechat": {
+    "appId": "wx42b2746da8e4f318",
+    "appSecret": "515e6bc276b9efe11dc463746490a123",
+    "debug": false
+  }
+}
